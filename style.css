@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-family: 'Rowdies', cursive;
+  }
+
+.rps-container{
+    display: flex-box;
+    text-align: center;
+    justify-content: center;
+}
+
+button{
+    border: 5px solid indianred;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: indigo;
+    color: indianred;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin-bottom: 5px;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color: indianred;
+    color: indigo;
+    border-color: indigo;
+}
+
+.you-container{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10em;
+    border: 5px solid indianred;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+.game-container{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.opponent-container{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10em;
+    border: 5px solid indianred;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+#opponent-text{
+    margin-top: 5px !important;
+    border: 5px solid indianred;
+    border-radius: 10px;
+    background-color: indigo;
+    color: indianred;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 300px;
+    margin: auto;
+
+}
+
+#opponent-text:hover{
+    background-color: indianred;
+    color: indigo;
+    border-color: indigo;
+}
+

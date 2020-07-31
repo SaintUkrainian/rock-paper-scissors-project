@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Rock, Paper, Scissors</title>
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <button id="start-game-btn">Start Game!</button>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Rock, Paper, Scissors</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <button id="start-game-btn">How to play?</button>
+        <div class="game-container">
+            <div class="opponent-container">
+                    <h2 id="opponent-text">?</h2>
+                <h2>Opponent</h2>
+            </div>
+            <div class="result-container">
+                <h2 id="result"></h2>
+            </div>
+            <div class="you-container">
+                <div class="text">
+                    <h2>You</h2>
+                </div>
+                <div class="rps-container">
+                    <button type="button" id="rock-btn">Rock</button>
+                    <button type="button" id="paper-btn">Paper</button>
+                    <button type="button" id="scissors-btn">Scissors</button>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
