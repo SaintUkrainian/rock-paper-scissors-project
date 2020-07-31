@@ -76,3 +76,7 @@ button:hover{
     border-color: indigo;
 }
 
+.result-container{
+    height: 100px;
+}
+
