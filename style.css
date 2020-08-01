@@ -105,4 +105,23 @@ button:hover{
 }
 
 
+#progress-bar{
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+
+#progress-bar li{
+    font-size: 16px;
+    display: inline;
+    border: 2px solid black;
+    padding: 5px 30px;
+    border-radius: 10px;
+    margin: 4px;
+}
+
+.progress-bar-container{
+    margin: 20px 20px;
+}
+
 
