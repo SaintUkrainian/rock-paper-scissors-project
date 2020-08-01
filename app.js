@@ -1,4 +1,4 @@
-const startGameBtn = document.getElementById("start-game-btn");
+const howToPlayBtn = document.getElementById("start-game-btn");
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
@@ -52,7 +52,18 @@ function isScissors() {
     getResult();
 }
 
-startGameBtn.addEventListener("click", showInfo);
-rockBtn.addEventListener("click", isRock);
-paperBtn.addEventListener("click", isPaper);
-scissorsBtn.addEventListener("click", isScissors);
+howToPlayBtn.addEventListener("click", () =>{
+    alert("It's not done yet!");
+});
+rockBtn.addEventListener("click", () =>{
+    userChoice = ROCK;
+    getResult();
+});
+paperBtn.addEventListener("click", () =>{
+    userChoice = PAPER;
+    getResult();
+});
+scissorsBtn.addEventListener("click", () =>{
+    userChoice = SCISSORS;
+    getResult();
+});

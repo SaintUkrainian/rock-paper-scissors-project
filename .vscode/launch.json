@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "D:/JavaScript Projects and etc/functions-01-starting-code/index.html",
+            "url": "D:/JavaScript Projects and etc/rock-paper-scissors-project/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
