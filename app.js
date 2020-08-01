@@ -27,13 +27,17 @@ function getResult() {
         (userChoice == PAPER && opponentChoice == ROCK)
     ) {
         opponent.textContent = opponentChoice;
+        result.className = "result-win";
         result.textContent = "You've won!";
     } else if (userChoice == opponentChoice) {
         opponent.textContent = opponentChoice;
-        result.textContent = "Wow, it's a draw!";
+        result.className = "result-draw";
+        result.textContent = "It's a draw!";
     } else {
         opponent.textContent = opponentChoice;
+        result.className = "result-loss";
         result.textContent = "You've lost.";
+
     }
 }
 
