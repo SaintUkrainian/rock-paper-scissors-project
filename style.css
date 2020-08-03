@@ -1,16 +1,16 @@
 * {
     box-sizing: border-box;
     font-size: 40px;
-    font-family: 'Rowdies', cursive;
-  }
+    font-family: "Rowdies", cursive;
+}
 
-.rps-container{
+.rps-container {
     display: flex-box;
     text-align: center;
     justify-content: center;
 }
 
-button{
+button {
     border: 5px solid indianred;
     border-radius: 10px;
     cursor: pointer;
@@ -20,17 +20,17 @@ button{
     margin-bottom: 5px;
 }
 
-button:focus{
+button:focus {
     outline: none;
 }
 
-button:hover{
+button:hover {
     background-color: indianred;
     color: indigo;
     border-color: indigo;
 }
 
-.you-container{
+.you-container {
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -41,13 +41,13 @@ button:hover{
     margin: auto;
 }
 
-.game-container{
+.game-container {
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
-.opponent-container{
+.opponent-container {
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -58,7 +58,7 @@ button:hover{
     margin: auto;
 }
 
-#opponent-text{
+#opponent-text {
     margin-top: 5px !important;
     border: 5px solid indianred;
     border-radius: 10px;
@@ -67,23 +67,22 @@ button:hover{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     width: 300px;
     margin: auto;
-
 }
 
-#opponent-text:hover{
+#opponent-text:hover {
     background-color: indianred;
     color: indigo;
     border-color: indigo;
 }
 
-.result-container{
+.result-container {
     height: 100px;
     margin-top: 40px;
     margin-bottom: 40px;
     justify-content: center;
 }
 
-#result{
+#result {
     width: 300px;
     margin: auto;
     padding: 5px;
@@ -91,27 +90,26 @@ button:hover{
     border: 5px solid black;
 }
 
-.result-win{
+.result-win {
     background-color: rgb(36, 255, 36);
 }
 
-.result-loss{
+.result-loss {
     background-color: rgb(255, 0, 0);
 }
 
-.result-draw{
+.result-draw {
     background-color: white;
     border: 5px solid black;
 }
 
-
-#progress-bar{
+#progress-bar {
     list-style: none;
     margin: auto;
     padding: 0;
 }
 
-#progress-bar li{
+#progress-bar li {
     font-size: 16px;
     display: inline;
     border: 2px solid black;
@@ -120,8 +118,70 @@ button:hover{
     margin: 4px;
 }
 
-.progress-bar-container{
+.progress-bar-container {
     margin: 20px 20px;
 }
 
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+}
 
+#backdrop.visible {
+    display: block;
+    pointer-events: all;
+}
+
+.how-to-play-modal {
+    position: fixed;
+    z-index: 100;
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    top: 30vh;
+    left: 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: none;
+}
+
+.how-to-play-modal p {
+    font-size: 30px;
+    text-align: start;
+    margin: auto;
+    padding: 5px 10px;
+}
+
+.how-to-play-modal.visible {
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.close-modal-container{
+    text-align: end;
+    margin: 0;
+}
+
+#close-modal-btn{
+    background: none;
+    margin: 5px;
+    align-self: center;
+    justify-self: center;
+    border: none;
+    box-shadow: none;
+}
+
+@keyframes fade-slide-in {
+    from {
+        transform: translateY(-5rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

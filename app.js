@@ -5,6 +5,9 @@ const scissorsBtn = document.getElementById("scissors-btn");
 const result = document.getElementById("result");
 const opponent = document.getElementById("opponent-text");
 const progressBar = document.querySelectorAll("li");
+const howToPlayModal = document.querySelector(".how-to-play-modal");
+const backdrop = document.getElementById("backdrop");
+const closeModalBtn = document.getElementById("close-modal-btn");
 
 const ROCK = "ROCK";
 const PAPER = "PAPER";
@@ -17,8 +20,12 @@ let opponentChoice;
 let counter = 0;
 let reset = false;
 
-function showInfo() {
-    alert("It's not done yet!");
+function toggleModal(){
+    howToPlayModal.classList.toggle("visible");
+}
+
+function toggleBackdrop(){
+    backdrop.classList.toggle("visible");
 }
 
 function isFinished(){
@@ -94,7 +101,8 @@ function isScissors() {
 }
 
 howToPlayBtn.addEventListener("click", () =>{
-    alert("It's not done yet!");
+    toggleModal();
+    toggleBackdrop();
 });
 rockBtn.addEventListener("click", () =>{
     userChoice = ROCK;
@@ -107,4 +115,12 @@ paperBtn.addEventListener("click", () =>{
 scissorsBtn.addEventListener("click", () =>{
     userChoice = SCISSORS;
     getResult();
+});
+backdrop.addEventListener("click", ()=>{
+    toggleModal();
+    toggleBackdrop();
+});
+closeModalBtn.addEventListener("click", ()=>{
+    toggleModal();
+    toggleBackdrop();
 });
