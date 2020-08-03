@@ -31,7 +31,6 @@ function toggleBackdrop(){
 function isFinished(){
     if(counter === 10){
         counter = 0;
-        alert("Round has finished!");
         result.textContent = "Play again!";
         result.className = "";
         reset = true;
