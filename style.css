@@ -103,6 +103,13 @@ button:hover {
     border: 5px solid black;
 }
 
+.text-win{
+    color: rgb(36, 255, 36);
+}
+.text-loss{
+    color: rgb(255, 0, 0);
+}
+
 #progress-bar {
     list-style: none;
     margin: auto;
@@ -175,6 +182,46 @@ button:hover {
     justify-self: center;
     border: none;
     box-shadow: none;
+}
+
+.conclusion-modal{
+    position: fixed;
+    z-index: 100;
+    background: white;
+    border-radius: 10px;
+    width: 400px;
+    top: 30vh;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: none;
+    align-self: center;
+    margin-left: 40%;
+}
+
+#results-text{
+    background-color: indigo;
+    font-weight: lighter;
+    color: indianred;
+    margin-top: 0;
+    padding: 10px 10px;
+    border: 2px solid indigo;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.conclusion-text{
+    font-size: 24px;
+    text-align: start !important;
+    margin-left: 8px;
+}
+
+.conclusion-modal.visible{
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+#conclusion-modal-close{
+    text-align: center;
 }
 
 @keyframes fade-slide-in {
