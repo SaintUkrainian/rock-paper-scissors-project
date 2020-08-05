@@ -1,3 +1,4 @@
+// getting all the important elements from index.html
 const howToPlayBtn = document.getElementById("start-game-btn");
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
@@ -10,13 +11,15 @@ const backdrop = document.getElementById("backdrop");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const conclusionModal = document.querySelector(".conclusion-modal");
 
-
+// global constants for the game
 const ROCK = "ROCK";
 const PAPER = "PAPER";
 const SCISSORS = "SCISSORS";
 
+// array for getting random item
 const choices = [ROCK, PAPER, SCISSORS];
 
+// variables for the game logic
 let userChoice;
 let opponentChoice;
 let counter = 0;
@@ -25,22 +28,28 @@ let counterWins = 0;
 let counterDraws = 0;
 let counterLosses = 0;
 
+
+// shows how to play instruction
 function showModal(){
     howToPlayModal.classList.add("visible");
 }
 
+// closes how to play instruction
 function closeModal(){
     howToPlayModal.classList.remove("visible");
 }
 
+// shows backdrop (dark background which covers modals to make user experience much better)
 function showBackdrop(){
     backdrop.classList.add("visible");
 }
 
+// closes backdrop
 function closeBackdrop(){
     backdrop.classList.remove("visible");
 }
 
+// checks if the game has finished to reset it and to show results menu
 function isFinished(){
     if(counter === 10){
         counter = 0;
@@ -51,12 +60,14 @@ function isFinished(){
     }
 }
 
+// closes results menu
 function closeConclusionModal(){
     conclusionModal.classList.remove("visible");
     closeBackdrop();
     isReset();
 }
 
+// shows results menu
 function showConclusionModal(){
     conclusionModal.classList.add("visible");
     showBackdrop();
@@ -74,6 +85,7 @@ function showConclusionModal(){
     numLosses.className = "text-loss";
 }
 
+// the actual reset function for progress bar and for wins/losses/draws counters
 function isReset(){
     counterLosses = 0;
     counterWins = 0;
@@ -87,6 +99,7 @@ function isReset(){
     }
 }
 
+// calculates result of each round and shows output
 function getResult() {
     let getIndex = Math.floor(Math.random() * Math.floor(3));;
     opponentChoice = choices[getIndex];
@@ -124,6 +137,7 @@ function getResult() {
     }
 }
 
+// user's choices
 function isRock() {
     userChoice = ROCK;
     getResult();
@@ -138,7 +152,9 @@ function isScissors() {
     userChoice = SCISSORS;
     getResult();
 }
+//-------------------
 
+// setting event listeners to our buttons
 howToPlayBtn.addEventListener("click", () =>{
     showModal();
     showBackdrop();
